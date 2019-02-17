@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Biblia"
+             x:Class="Biblia.MainPage"
+             BindingContext="{Binding Main, Source={StaticResource Key=Locator}}">
+
+    <StackLayout
+        
+        BackgroundColor="Black"
+        BindingContext="{Binding Start}">
+        <Image 
+            Source="cruz" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <ActivityIndicator
+            IsRunning="{Binding IsRunning, Mode=TwoWay}"
+            VerticalOptions="CenterAndExpand"/>
+        <Label
+            FontFamily="Harlow Solid Italic"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            TextColor="White"
+            Text="Biblia"
+            VerticalOptions="Center"/>
+        <Button
+            Command="{Binding NavegarCommand}"
+            Text="Navegar">
+        </Button>
+    </StackLayout>
+
+</ContentPage>
